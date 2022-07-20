@@ -1,0 +1,172 @@
+.footer {
+  position: relative;
+
+  background-color: #3F3F3F;
+}
+
+.footer::before {
+  position: absolute;
+  top: -90px;
+
+  width: 100%;
+  height: 300px;
+
+  background-image: url("../../img/background.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  transform: rotate(180deg);
+  content: "";
+  z-index: -1;
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .footer::before {
+    background-image: url("../../img/background@2x.webp");
+  }
+}
+
+.footer::after {
+  position: absolute;
+  top: -16px;
+
+  width: 100%;
+  height: 6px;
+
+  background-color: #3F3F3F;
+
+  content: "";
+}
+
+.footer__container {
+  display: grid;
+  grid-auto-flow: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__logo-link {
+  display: block;
+}
+
+.footer__logo-image {
+  display: block;
+  width: auto;
+}
+
+.footer__social-menu {
+  margin-top: 55px;
+}
+
+.social-menu {
+  display: flex;
+  gap: 23px;
+}
+
+.social-menu__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  background-image: url("../../img/icon-facebook.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-size: 0;
+}
+
+.social-menu__link--instagram {
+  background-image: url("../../img/icon-instagram.svg");
+}
+
+.social-menu__link--twitter {
+  background-image: url("../../img/icon-twitter.svg");
+}
+
+.footer__section--about {
+  margin-left: 122px;
+  max-width: 136px;
+}
+
+.footer__section--catalog {
+  margin-left: 25px;
+  max-width: 150px;
+}
+
+.footer__section--information {
+  margin-left: 43px;
+  max-width: 150px;
+}
+
+.footer__section--contacts {
+  margin-left: 130px;
+  max-width: 140px;
+
+  letter-spacing: 1px;
+}
+
+.footer__heading {
+  margin-top: 20px;
+  margin-bottom: 13px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2px;
+
+  color: #FFFFFF;
+
+  opacity: 0.7;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__menu-item {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.footer__menu-link {
+  display: block;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  color: #FFFFFF;
+}
+
+.footer__container p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+
+  color: #FFFFFF;
+}
+
+.footer__phone {
+  display: block;
+  padding-left: 13px;
+
+  text-decoration: none;
+  color: #FFFFFF;
+
+  background-image: url("../../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: left 2px center;
+}
+
+.footer__workinghours {
+  display: block;
+  padding-left: 13px;
+
+  background-image: url("../../img/icon-clock.svg");
+  background-repeat: no-repeat;
+}

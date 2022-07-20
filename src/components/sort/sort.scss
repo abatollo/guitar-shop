@@ -1,0 +1,73 @@
+.sort {
+  display: flex;
+}
+
+.sort__heading {
+  grid-column: span 2;
+
+  margin: 0;
+  margin-right: 22px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.sort__fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.sort__fieldset--by-order {
+  margin-left: auto;
+}
+
+.sort__list {
+  display: flex;
+  gap: 36px;
+}
+
+.sort__list--order {
+  gap: 14px;
+  margin-right: 8px;
+}
+
+.sort__label {
+  color: #585757;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+.sort__radio:checked + .sort__label {
+  color: #000000;
+}
+
+.sort__label--asc, .sort__label--desc {
+  display: block;
+  width: 22px;
+  height: 16px;
+
+  font-size: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sort__label--asc {
+  background-image: url("../../img/icon-sort-asc-inactive.svg");
+}
+
+.sort__radio:checked + .sort__label--asc {
+  background-image: url("../../img/icon-sort-asc-active.svg");
+}
+
+.sort__label--desc {
+  background-image: url("../../img/icon-sort-desc-inactive.svg");
+}
+
+.sort__radio:checked + .sort__label--desc {
+  background-image: url("../../img/icon-sort-desc-active.svg");
+}

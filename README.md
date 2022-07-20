@@ -1,1 +1,1 @@
-# guitar-shop
+# Личный проект Guitar Shop
