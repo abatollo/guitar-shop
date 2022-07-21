@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { ActionCreator } from '../../store/action';
+import { formatPrice } from '../../utils/format-price';
 
 const Promo = ({ sum, changePromocode, changeTotalSum, totalSum }) => {
   const [promoCode, setPromoCode] = useState(`GITARAHIT`);
@@ -48,7 +49,7 @@ const Promo = ({ sum, changePromocode, changeTotalSum, totalSum }) => {
       </p>
       <input className="promo__input" type="text" name="promo-input" id="promo-input" value={promoCode} onChange={(evt) => {setPromoCode(evt.target.value)}} />
       <button className="promo__button" onClick={promoCodeApplyHandler}>Применить купон</button>
-      <p className="promo__total">Всего: {totalSum > 0 ? totalSum : sum} ₽</p>
+      <p className="promo__total">Всего: {formatPrice(totalSum > 0 ? totalSum : sum)} ₽</p>
       <button className="promo__button promo__button--accent">Оформить заказ</button>
     </div>
   );

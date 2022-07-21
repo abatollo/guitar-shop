@@ -9,6 +9,7 @@ import Sort from "../sort/sort";
 
 import Guitars from "../../const/guitars.json";
 import IconStar from "../../img/icon-star.svg";
+import { formatPrice } from '../../utils/format-price';
 
 const Catalog = ({ setPopup }) => {
   const SlicedGuitars = Guitars.slice(0, 9);
@@ -56,7 +57,7 @@ const Catalog = ({ setPopup }) => {
                 </div>
               </div>
               <h3 className="catalog-item__name">{guitar.name}</h3>
-              <div className="catalog-item__price">{guitar.price} ₽</div>
+              <div className="catalog-item__price">{formatPrice(guitar.price)} ₽</div>
               <button className="catalog-item__button">Подробнее</button>
               <button className="catalog-item__button catalog-item__button--hero" onClick={() => {setPopup({isOpened: true, type: `add`, id: guitar.id})}}>Купить</button>
             </article>

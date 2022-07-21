@@ -7,6 +7,7 @@ import { ActionCreator } from '../../store/action';
 import Guitars from "../../const/guitars.json";
 import { GuitarTypes } from "../../const/guitar-types";
 import { keyCodes } from '../../const/key-codes';
+import { formatPrice } from '../../utils/format-price';
 
 const Popup = ({ addToCart, removeFromCart, setPopup, popup }) => {
   const popupGuitar = Guitars.find((guitar) => guitar.id === popup.itemId);
@@ -79,7 +80,7 @@ const Popup = ({ addToCart, removeFromCart, setPopup, popup }) => {
             <h3 className="popup__subheading">{popupGuitar.name}</h3>
             <p className="popup__sku">Артикул: {popupGuitar.sku}</p>
             <p className="popup__properties">{GuitarTypes[popupGuitar.type]}, {popupGuitar.strings} струнная</p>
-            <p className="popup__price">Цена: {popupGuitar.price} ₽</p>
+            <p className="popup__price">Цена: {formatPrice(popupGuitar.price)} ₽</p>
           </div>
           <div className="popup__button-group">
             <button className="popup__button" onClick={() => {
@@ -101,7 +102,7 @@ const Popup = ({ addToCart, removeFromCart, setPopup, popup }) => {
             <h3 className="popup__subheading">{popupGuitar.name}</h3>
             <p className="popup__sku">Артикул: {popupGuitar.sku}</p>
             <p className="popup__properties">{GuitarTypes[popupGuitar.type]}, {popupGuitar.strings} струнная</p>
-            <p className="popup__price">Цена: {popupGuitar.price} ₽</p>
+            <p className="popup__price">Цена: {formatPrice(popupGuitar.price)} ₽</p>
           </div>
           <div className="popup__button-group">
             <button className="popup__button" onClick={() => {

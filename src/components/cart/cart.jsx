@@ -7,6 +7,7 @@ import Promo from '../promo/promo';
 
 import Guitars from "../../const/guitars.json";
 import { GuitarTypes } from "../../const/guitar-types";
+import { formatPrice } from '../../utils/format-price';
 
 const Cart = ({ cartAddedIds, cartQuantityById, setPopup, increaseQuantity, decreaseQuantity }) => {
   const FilteredGuitars = Guitars.filter((guitar) => cartAddedIds.includes(guitar.id));
@@ -63,13 +64,13 @@ const Cart = ({ cartAddedIds, cartQuantityById, setPopup, increaseQuantity, decr
                 <p className="cart-item__sku">Артикул: {guitar.sku}</p>
                 <p className="cart-item__properties">{GuitarTypes[guitar.type]}, {guitar.strings} струнная</p>
               </div>
-              <p className="cart-item__price">{guitar.price} ₽</p>
+              <p className="cart-item__price">{formatPrice(guitar.price)} ₽</p>
               <div className="cart-item__quantity">
                 <button className="cart-item__quantity-button" onClick={() => {handleDecreaseQuantityClick(guitar)}}>-</button>
                 <input className="cart-item__quantity-input" type="text" name={`quantity-input-item-${guitar.id}`} id={`quantity-input-item-${guitar.id}`} value={cartQuantityById[guitar.id]} readOnly />
                 <button className="cart-item__quantity-button" onClick={() => {handleIncreaseQuantityClick(guitar)}}>+</button>
               </div>
-              <p className="cart-item__total-price">{guitar.price * cartQuantityById[guitar.id]} ₽</p>
+              <p className="cart-item__total-price">{formatPrice(guitar.price * cartQuantityById[guitar.id])} ₽</p>
               <button className="cart-item__remove" onClick={() => {handleRemoveButtonClick(guitar)}}>Удалить</button>
             </article>
           )}
