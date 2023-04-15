@@ -1,6 +1,6 @@
 {
   "name": "guitar-shop",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "dependencies": {
     "@redux-devtools/extension": "^3.2.5",
@@ -10,7 +10,7 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "^5.0.1",
     "redux": "^4.2.1",
-    "sass": "^1.60.0"
+    "sass": "^1.62.0"
   },
   "scripts": {
     "start": "react-scripts start",
