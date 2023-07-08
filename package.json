@@ -1,6 +1,6 @@
 {
   "name": "guitar-shop",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "private": true,
   "dependencies": {
     "@redux-devtools/extension": "^3.2.5",
